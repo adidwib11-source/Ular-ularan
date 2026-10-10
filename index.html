@@ -3,55 +3,100 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Ular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1020">
+    <title>Snake Neon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="game-container">
-        <h1>🐍 Game Ular</h1>
-
-        <div class="score-board">
-            <span>Skor: <strong id="score">0</strong></span>
-            <span>Rekor: <strong id="best-score">0</strong></span>
-        </div>
-
-        <div class="game-screen">
-            <canvas id="game-canvas" width="360" height="360"></canvas>
-
-            <div id="game-overlay" class="game-overlay">
-                <h2 id="game-message">Siap Bermain?</h2>
-                <button id="start-button">Mulai Game</button>
+        <header class="game-header">
+            <div class="brand">
+                <span class="brand-icon">🐍</span>
+                <div>
+                    <h1>Snake Neon</h1>
+                    <p>CLASSIC ARCADE GAME</p>
+                </div>
             </div>
-        </div>
 
-        <section class="controller-section">
-            <p class="controller-label">CONTROLS</p>
+            <div class="score-board">
+                <div class="score-card">
+                    <span>SKOR</span>
+                    <strong id="score">0</strong>
+                </div>
+                <div class="score-card">
+                    <span>REKOR</span>
+                    <strong id="best-score">0</strong>
+                </div>
+            </div>
+        </header>
 
-            <div class="joystick">
-                <button class="direction up" data-direction="up" aria-label="Atas">
-                    <span>▲</span>
-                </button>
-
-                <button class="direction left" data-direction="left" aria-label="Kiri">
-                    <span>◀</span>
-                </button>
-
-                <div class="joystick-center">
-                    <div></div>
+        <section class="game-layout">
+            <div class="game-panel">
+                <div class="panel-top">
+                    <span class="status-dot"></span>
+                    <span>GAME AREA</span>
+                    <span class="live-label">PLAY</span>
                 </div>
 
-                <button class="direction right" data-direction="right" aria-label="Kanan">
-                    <span>▶</span>
-                </button>
+                <div class="game-screen">
+                    <canvas id="game-canvas" width="360" height="360"></canvas>
 
-                <button class="direction down" data-direction="down" aria-label="Bawah">
-                    <span>▼</span>
-                </button>
+                    <div id="game-overlay" class="game-overlay">
+                        <div class="start-card">
+                            <div class="start-icon">🐍</div>
+                            <h2 id="game-message">Siap Bermain?</h2>
+                            <p>Makan makanan, tumbuh lebih panjang!</p>
+                            <button id="start-button">▶ MULAI GAME</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p class="hint">Gunakan tombol arah untuk bergerak</p>
+            <aside class="controller-panel">
+                <div class="controller-heading">
+                    <h2>Kontrol</h2>
+                    <p>Tekan arah untuk bergerak</p>
+                </div>
+
+                <div class="dpad" aria-label="Joystick arah">
+                    <button class="direction up" data-direction="up" aria-label="Atas">
+                        <span>▲</span>
+                    </button>
+
+                    <button class="direction left" data-direction="left" aria-label="Kiri">
+                        <span>◀</span>
+                    </button>
+
+                    <div class="dpad-center">
+                        <div class="center-ring">
+                            <span>✦</span>
+                        </div>
+                    </div>
+
+                    <button class="direction right" data-direction="right" aria-label="Kanan">
+                        <span>▶</span>
+                    </button>
+
+                    <button class="direction down" data-direction="down" aria-label="Bawah">
+                        <span>▼</span>
+                    </button>
+                </div>
+
+                <div class="control-hint">
+                    <span class="hint-key">▲</span>
+                    <span class="hint-key">▼</span>
+                    <span class="hint-key">◀</span>
+                    <span class="hint-key">▶</span>
+                    <span>4 ARAH</span>
+                </div>
+            </aside>
         </section>
+
+        <footer class="game-footer">
+            <span>● NEON MODE</span>
+            <span>HAVE FUN & GOOD LUCK</span>
+        </footer>
     </main>
 
     <script src="script.js"></script>
