@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Ular-Ularan</title>
+    <title>Game Ular</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,14 +25,33 @@
             </div>
         </div>
 
-        <div class="controls">
-            <button class="up" data-direction="up" aria-label="Atas">▲</button>
-            <button class="left" data-direction="left" aria-label="Kiri">◀</button>
-            <button class="down" data-direction="down" aria-label="Bawah">▼</button>
-            <button class="right" data-direction="right" aria-label="Kanan">▶</button>
-        </div>
+        <section class="controller-section">
+            <p class="controller-label">CONTROLS</p>
 
-        <p class="hint">Gunakan tombol arah untuk menggerakkan ular.</p>
+            <div class="joystick">
+                <button class="direction up" data-direction="up" aria-label="Atas">
+                    <span>▲</span>
+                </button>
+
+                <button class="direction left" data-direction="left" aria-label="Kiri">
+                    <span>◀</span>
+                </button>
+
+                <div class="joystick-center">
+                    <div></div>
+                </div>
+
+                <button class="direction right" data-direction="right" aria-label="Kanan">
+                    <span>▶</span>
+                </button>
+
+                <button class="direction down" data-direction="down" aria-label="Bawah">
+                    <span>▼</span>
+                </button>
+            </div>
+
+            <p class="hint">Gunakan tombol arah untuk bergerak</p>
+        </section>
     </main>
 
     <script src="script.js"></script>
