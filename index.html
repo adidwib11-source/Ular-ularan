@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ular-Ularan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-container">
+        <h1>🐍 Game Ular</h1>
+
+        <div class="score-board">
+            <span>Skor: <strong id="score">0</strong></span>
+            <span>Rekor: <strong id="best-score">0</strong></span>
+        </div>
+
+        <div class="game-screen">
+            <canvas id="game-canvas" width="360" height="360"></canvas>
+
+            <div id="game-overlay" class="game-overlay">
+                <h2 id="game-message">Siap Bermain?</h2>
+                <button id="start-button">Mulai Game</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="up" data-direction="up" aria-label="Atas">▲</button>
+            <button class="left" data-direction="left" aria-label="Kiri">◀</button>
+            <button class="down" data-direction="down" aria-label="Bawah">▼</button>
+            <button class="right" data-direction="right" aria-label="Kanan">▶</button>
+        </div>
+
+        <p class="hint">Gunakan tombol arah untuk menggerakkan ular.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

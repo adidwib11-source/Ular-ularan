@@ -1,0 +1,155 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #101827;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #54e878;
+    font-size: 30px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    background: #202d40;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.game-screen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 3px solid #54e878;
+    border-radius: 10px;
+    background: #08111e;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background: rgba(8, 17, 30, 0.85);
+}
+
+.game-overlay.hidden {
+    display: none;
+}
+
+.game-overlay h2 {
+    font-size: 24px;
+}
+
+#start-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #54e878;
+    color: #101827;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start-button:active {
+    transform: scale(0.95);
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(2, 60px);
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.controls button {
+    border: 2px solid #54e878;
+    border-radius: 12px;
+    background: #202d40;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.controls button:active {
+    background: #54e878;
+    color: #101827;
+}
+
+.controls .up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.controls .left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.controls .down {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.controls .right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.hint {
+    margin-top: 18px;
+    color: #aab8cc;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 380px) {
+    .controls {
+        grid-template-columns: repeat(3, 62px);
+        grid-template-rows: repeat(2, 55px);
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
